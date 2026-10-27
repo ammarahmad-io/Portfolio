@@ -66,10 +66,10 @@ export function Hero() {
         />
 
         <p
-          className="fade-in relative mt-2 text-center font-mono text-[10px] tracking-[0.3em] text-sand [text-shadow:0_0_8px_#0b0a08,0_0_14px_#0b0a08] md:mt-3 md:text-[11px]"
+          className="fade-in relative mt-2 text-center font-mono text-[8px] tracking-[0.26em] text-sand [text-shadow:0_0_8px_#0b0a08,0_0_14px_#0b0a08] md:mt-3 md:text-[9px]"
           style={d(0.9)}
         >
-          FULL-STACK &amp; AGENTIC AI ENGINEER
+          A HUMAN PERSPECTIVE ON TECHNOLOGY
         </p>
 
         <h1 className="relative mt-3 text-center font-display text-[clamp(44px,12.4vw,60px)] leading-[0.98] tracking-[-0.045em] [text-shadow:0_4px_45px_#0008] md:text-[clamp(52px,min(5.6vw,9.4svh),100px)]">
