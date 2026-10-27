@@ -72,10 +72,11 @@ export function Hero() {
           A HUMAN PERSPECTIVE ON TECHNOLOGY
         </p>
 
-        <h1 className="relative mt-3 text-center font-display text-[clamp(44px,12.4vw,60px)] leading-[0.98] tracking-[-0.045em] [text-shadow:0_4px_45px_#0008] md:text-[clamp(52px,min(5.6vw,9.4svh),100px)]">
+        <h1 className="relative mt-3 text-center font-display text-[clamp(44px,12.4vw,64px)] leading-[0.98] tracking-[-0.05em] [text-shadow:0_4px_45px_#0008] md:text-[clamp(64px,min(9vw,14svh),184px)] md:leading-[0.93]">
           <span className="rise"><span style={d(0.35)}>I build systems</span></span>
-          <span className="rise"><span style={d(0.47)}>that think before you</span></span>
+          {/* "ask." wraps to its own line only when the screen is too narrow */}
           <span className="rise">
+            <span style={d(0.47)}>that think before you</span>{" "}
             <span className="italic text-amber" style={d(0.62)}>
               ask.
             </span>
