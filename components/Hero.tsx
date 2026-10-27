@@ -62,17 +62,17 @@ export function Hero() {
           data-portrait-anchor
           role="img"
           aria-label="Portrait of Ammar Ahmad"
-          className="aspect-[1087/883] w-[min(88vw,500px,max(260px,calc((100svh-500px)*1.23)))]"
+          className="aspect-[1087/883] w-[min(88vw,500px,max(260px,calc((100svh-525px)*1.23)))]"
         />
 
         <p
-          className="fade-in relative -mt-6 text-center font-mono text-[10px] tracking-[0.3em] text-sand [text-shadow:0_0_8px_#0b0a08,0_0_14px_#0b0a08] md:-mt-9 md:text-[11px]"
+          className="fade-in relative mt-2 text-center font-mono text-[10px] tracking-[0.3em] text-sand [text-shadow:0_0_8px_#0b0a08,0_0_14px_#0b0a08] md:mt-3 md:text-[11px]"
           style={d(0.9)}
         >
           FULL-STACK &amp; AGENTIC AI ENGINEER
         </p>
 
-        <h1 className="relative mt-2 text-center font-display text-[clamp(44px,12.4vw,60px)] leading-[0.98] tracking-[-0.045em] [text-shadow:0_4px_45px_#0008] md:text-[clamp(52px,min(5.6vw,9.4svh),100px)]">
+        <h1 className="relative mt-3 text-center font-display text-[clamp(44px,12.4vw,60px)] leading-[0.98] tracking-[-0.045em] [text-shadow:0_4px_45px_#0008] md:text-[clamp(52px,min(5.6vw,9.4svh),100px)]">
           <span className="rise"><span style={d(0.35)}>I build systems</span></span>
           <span className="rise"><span style={d(0.47)}>that think before you</span></span>
           <span className="rise">
@@ -82,7 +82,7 @@ export function Hero() {
           </span>
         </h1>
 
-        <div className="fade-in mt-7 flex flex-wrap items-center justify-center gap-x-8 gap-y-5" style={d(1.05)}>
+        <div className="fade-in mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-5" style={d(1.05)}>
           <a
             href="#story"
             className="inline-flex h-[52px] items-center gap-9 rounded-full border border-[#3a352d] bg-ink/40 px-6 text-[16px] font-medium backdrop-blur-sm transition-colors hover:border-amber hover:text-amber"
@@ -100,7 +100,7 @@ export function Hero() {
         </div>
 
         {/* Bottom bar */}
-        <div className="fade-in mt-auto flex w-full items-center justify-between gap-4 pb-4 pt-6 font-mono text-[11px] tracking-[0.22em] text-sand" style={d(1.3)}>
+        <div className="fade-in mt-auto flex w-full items-center justify-between gap-4 pb-3 pt-4 font-mono text-[11px] tracking-[0.22em] text-sand" style={d(1.3)}>
           <span className="flex items-center gap-4">
             <span aria-hidden="true" className="h-8 w-px bg-amber" />
             SCROLL TO RUN ↓
