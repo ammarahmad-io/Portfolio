@@ -65,10 +65,10 @@ const PROJECTS: Project[] = [
 
 function Graph({ nodes }: { nodes: string[] }) {
   return (
-    // On phones the nodes wrap onto two rows; from sm up they sit on one line joined by stretching edges.
-    <div className="flex w-full flex-wrap items-center gap-y-3 sm:flex-nowrap">
+    // Nodes never shrink: when they don't fit on one line they wrap, and the edges stretch to fill each row.
+    <div className="flex w-full flex-wrap items-center gap-y-3">
       {nodes.map((node, i) => (
-        <div key={node} className="flex items-center sm:min-w-0 sm:flex-1 sm:last:flex-none">
+        <div key={node} className="contents">
           <span
             className={`shrink-0 whitespace-nowrap rounded-md border px-2.5 py-1.5 font-mono text-[11px] sm:px-3 sm:py-2 sm:text-[12px] ${
               i === 1 ? "border-amber bg-amber/10 text-amber" : i === nodes.length - 1 ? "border-bone bg-bone text-ink" : "border-ash text-bone"
@@ -77,7 +77,7 @@ function Graph({ nodes }: { nodes: string[] }) {
             {node}
           </span>
           {i < nodes.length - 1 && (
-            <span className="edge h-px w-4 bg-ash sm:w-auto sm:min-w-4 sm:flex-1" style={{ "--e": `${0.2 + i * 0.15}s` } as React.CSSProperties} />
+            <span className="edge h-px min-w-4 flex-1 basis-4 bg-ash" style={{ "--e": `${0.2 + i * 0.15}s` } as React.CSSProperties} />
           )}
         </div>
       ))}
@@ -92,7 +92,8 @@ export function Work() {
         SWIPE TO SEE ALL {PROJECTS.length} →
       </p>
       <DragScroll className="bleed mt-6 sm:mt-16 md:mt-20">
-        <div className="flex w-max gap-3 pb-2 sm:gap-5">
+        {/* Cards keep equal height only on wide screens; on narrow ones each fits its own text */}
+        <div className="flex w-max items-start gap-3 pb-2 sm:gap-5 lg:items-stretch">
           {PROJECTS.map((p, i) => (
             <article
               key={p.n}
@@ -106,7 +107,7 @@ export function Work() {
                 <span className="size-2 rounded-full bg-amber" />
                 <span className="ml-2 font-mono text-[12px] text-ash">action_{p.n}.graph</span>
               </div>
-              <div className="flex items-center bg-ink/60 px-5 py-7 sm:h-44 sm:px-6 sm:py-0">
+              <div className="flex min-h-36 items-center bg-ink/60 px-5 py-7 sm:min-h-44 sm:px-6">
                 <Graph nodes={p.graph} />
               </div>
               <div className="flex flex-1 flex-col gap-3 p-5 sm:gap-4 sm:p-7">
