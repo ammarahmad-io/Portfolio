@@ -105,7 +105,7 @@ export function Hero() {
             <span aria-hidden="true" className="h-8 w-px bg-amber" />
             SCROLL TO RUN ↓
           </span>
-          <span className="hidden md:inline">SHIPPING AGENTS SINCE 2024</span>
+          <span className="hidden md:inline">SHIPPING SINCE 2024</span>
           {/* Keeps this spot free for the floating motion toggle */}
           <span aria-hidden="true" className="w-[150px]" />
         </div>
