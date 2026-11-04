@@ -38,18 +38,20 @@ export function MotionProvider({ children }: { children: React.ReactNode }) {
   return (
     <MotionContext.Provider value={{ motion, toggle: () => setMotion((m) => !m) }}>
       {children}
+      <MotionToggle />
     </MotionContext.Provider>
   );
 }
 
-export function MotionToggle() {
+/** Floating toggle, available on every part of the page. */
+function MotionToggle() {
   const { motion, toggle } = useMotion();
   return (
     <button
       type="button"
       onClick={toggle}
       aria-pressed={!motion}
-      className="flex h-11 items-center gap-2 rounded border border-smoke bg-graphite px-4 font-mono text-[12px] tracking-[0.18em] text-bone transition-colors hover:border-ash"
+      className="fixed bottom-3 right-[var(--gutter)] z-40 flex h-11 items-center gap-2 rounded border border-smoke bg-graphite/90 px-4 font-mono text-[12px] tracking-[0.18em] text-bone shadow-lg shadow-black/40 backdrop-blur-md transition-colors hover:border-ash"
     >
       <span aria-hidden="true">{motion ? "❚❚" : "▶"}</span>
       {motion ? "MOTION ON" : "MOTION OFF"}

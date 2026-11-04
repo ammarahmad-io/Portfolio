@@ -9,35 +9,19 @@ type Step = {
   current?: boolean;
 };
 
-// [BRACKETS] mark details still to be filled in.
 const STEPS: Step[] = [
-  {
-    id: "step_01",
-    year: "2024",
-    title: "[ROLE] @ [COMPANY]",
-    tools: "react, next.js",
-    output: "[What you shipped, ideally with a number]",
-  },
-  {
-    id: "step_02",
-    year: "2025",
-    title: "[ROLE] @ [COMPANY]",
-    tools: "fastapi, postgres, langchain",
-    output: "[Result]",
-  },
   {
     id: "event",
     year: "2026",
     title: "NASCON 2026 · Agentika hackathon",
     tools: "agents, under a deadline",
-    output: "[What the team built]",
+    output: "Outpilot, an AI outreach agent, built with my team at FAST University",
   },
   {
-    id: "step_03",
+    id: "step_01",
     year: "2026",
-    title: "[CURRENT ROLE] @ [COMPANY]",
-    tools: "langgraph, fastmcp, docker",
-    output: "[Result]",
+    title: "AI Intern @ Revnix",
+    output: "Full-time",
     current: true,
   },
 ];

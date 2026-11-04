@@ -1,5 +1,4 @@
 import { SignalPortrait } from "./SignalPortrait";
-import { MotionToggle } from "./MotionProvider";
 import { LINKEDIN } from "@/lib/links";
 
 const d = (s: number) => ({ "--d": `${s}s` }) as React.CSSProperties;
@@ -47,7 +46,7 @@ export function Hero() {
 
         {/* Right rail */}
         <div className="fade-in absolute right-[var(--gutter)] top-[140px] hidden text-right font-mono text-[11px] tracking-[0.22em] xl:block" style={d(0.6)}>
-          BASED IN [CITY] · BUILDING IN PUBLIC
+          BASED IN HARIPUR · BUILDING IN PUBLIC
         </div>
         <div className="fade-in absolute right-[var(--gutter)] top-[300px] hidden flex-col gap-2.5 text-right font-mono text-[11px] tracking-[0.12em] text-ash xl:flex" style={d(0.8)}>
           <span>run_id · 2026.10</span>
@@ -107,7 +106,8 @@ export function Hero() {
             SCROLL TO RUN ↓
           </span>
           <span className="hidden md:inline">SHIPPING AGENTS SINCE 2024</span>
-          <MotionToggle />
+          {/* Keeps this spot free for the floating motion toggle */}
+          <span aria-hidden="true" className="w-[150px]" />
         </div>
       </div>
     </section>
